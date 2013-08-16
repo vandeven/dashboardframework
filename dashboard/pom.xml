@@ -43,6 +43,7 @@
 	<properties>
 		<wicket.version>6.9.1</wicket.version>
 		<jetty.version>7.6.3.v20120416</jetty.version>
+		<resteasy.version>3.0.3.Final</resteasy.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -87,6 +88,14 @@
 			<version>${jetty.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!--  WEBSERVICES  -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+	  
 	</dependencies>
 	<build>
 		<resources>
@@ -163,7 +172,7 @@
 					<downloadSources>true</downloadSources>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>	
 	</build>
 
 	<repositories>
@@ -177,5 +186,9 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+	   <repository>
+		  <id>JBoss repository</id>
+		  <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+	   </repository>		
 	</repositories>
 	</project>
