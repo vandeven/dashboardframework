@@ -95,6 +95,8 @@
 			<artifactId>resteasy-jaxrs</artifactId>
 			<version>${resteasy.version}</version>
 		</dependency>
+		
+		
 	  
 	</dependencies>
 	<build>
